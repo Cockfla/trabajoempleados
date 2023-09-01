@@ -13,17 +13,11 @@ class EmpleadoIndefinido extends Empleado {
     }
 @Override
     public int pagarFiniquito() {
-        if (getTiempoContrato() >= 12) {
-            int bono = 50000;
-            int salarioybono = getSalario() + bono;
-            return salarioybono * getTiempoContrato();
-
-        }else{
-            return super.pagarFiniquito();
-        }
+        return getSalario()*getTiempoContrato();
     }
 
     public int darVacaciones() {
+
         if (isHasVacaciones()) {
             return super.darVacaciones();
         } else {
